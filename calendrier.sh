@@ -18,7 +18,7 @@ y=$(date -d "$debu +7 day" +%Y)
 fin=$(zenity --calendar  --day="$d" --month="$m" --year="$y" --date-format=%Y-%m-%d --text=fin)
 
 
-login=$(cat test.json)
+login=$(cat login.json)
 id=$(tr -d '"-"' <<< $(echo $login| jq ".id"))
 mdp=$(tr -d '"-"' <<< $(echo $login| jq ".mdp"))
 if [ -n "$id" ]; then
